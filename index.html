@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZacRichards Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 <body>
     <div id="header">
@@ -27,14 +29,6 @@
             </div>
         </div>
     </div>
-    <!-----------SoftwareExperience------------>
-    <div id="softwareExperience">
-        <div class="container">
-            <div class="tab-titles">
-                
-            </div>
-        </div>
-    </div>
     <!-----------About------------>
     <div id="about">
         <div class="container">
@@ -46,15 +40,79 @@
                     <h1 class="sub-title">
                         About Me
                     </h1>
-                    <p>I've been developing games since 2018 using Unity and C#. 
-                        In 2024 I mad the switch to Unreal and started learning 
-                        Unreal Engine 5 blueprints. From 2023 - 2024 I studied at 
-                        The Academy of Interactive Entertainment (AIE) where I further 
-                        developed my soft and technical skills.
-                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active" onclick="opentab('software')">Development Tools</p>
+                        <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active" id="software">
+                        <ul>
+                            <li><span>Development Software</span><br>
+                                <i class="fa-brands fa-unity"></i> Unity<br>
+                                <i class="devicon-unrealengine-original"></i> UnrealEngine<br>
+                                <i class="devicon-visualstudio-plain"></i> Visual Studio<br>
+                                <i class="devicon-git-plain"></i> Git<br>                    
+                                <i class="devicon-blender-original"></i> Blender                    
+
+                            </li>
+                            <li><span>Languages</span><br>
+                                <i class="devicon-csharp-plain"></i> C#<br>
+                                <i class="fa-brands fa-html5"></i> HTML<br>
+                                <i class="fa-brands fa-css3-alt"></i> CSS<br>
+                                <i class="fa-solid fa-share-nodes"></i> Unreal Engine Blueprints
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="skills">
+                        <ul>
+                            <li><span>Soft Skills</span><br>
+                                Multidisiplin Teamwork<br>
+                                Creative Problem Solving<br>
+                                Critical Thinking<br> 
+                                Management                  
+                            </li>
+                            <li><span>Technical Skills</span><br>
+                                Programming<br>
+                                Visual Scripting<br>
+                                Level Design<br>
+                                UI/UX Design<br>
+                                Sound Design<br>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Tafe NSW Feb 2022-Jun 2022</span><br>
+                                Certificate III in Information Technology ICT30120
+                            </li>
+                            <li><span>Academy of Interactive Entertainment Feb 2023-Dec 2024 </span><br>
+                                CUA51020 Diploma of Screen and Media<br>
+                                CUA51120 Diploma of Visual Arts<br>
+                                11151NAT Advanced Diploma of Professional Game Development
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active");
+            }
+            event.currentTarget.classList.add("active");
+            document.getElementById(tabname).classList.add("active");
+        }
+    </script>
+
 </body>
 </html>
