@@ -9,15 +9,17 @@
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 <body>
-    <div id="header">
+    <div id="home">
         <div class="container">
             <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closeMenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openMenu()"></i>
             </nav>
             <div class="header-text">
                 <h1>
@@ -42,9 +44,9 @@
                     </h1>
 
                     <div class="tab-titles">
-                        <p class="tab-links active" onclick="opentab('software')">Development Tools</p>
-                        <p class="tab-links" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links active" onclick="openTab('software')">Tools</p>
+                        <p class="tab-links" onclick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('education')">Education</p>
                     </div>
                     <div class="tab-contents active" id="software">
                         <ul>
@@ -156,7 +158,7 @@
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
 
-        function opentab(tabname){
+        function openTab(tabname){
             for(tablink of tablinks){
                 tablink.classList.remove("active");
             }
@@ -165,6 +167,15 @@
             }
             event.currentTarget.classList.add("active");
             document.getElementById(tabname).classList.add("active");
+        }
+
+        var sidemenu = document.getElementById("sidemenu")
+
+        function openMenu(){
+            sidemenu.style.right = "0";
+        }
+        function closeMenu(){
+            sidemenu.style.right = "-150px";
         }
     </script>
 
