@@ -121,7 +121,7 @@ nav ul li a:hover::after{
 #projects{
     padding: 50px, 0;
 }
-.sub-title.projects{
+.sub-title.center{
     text-align: center;
     margin-top: 20%;
 }
@@ -170,6 +170,10 @@ nav ul li a:hover::after{
     font-weight: 500;
     margin-bottom: 20px;
 }
+.layer h4{
+    font-weight: 600;
+    margin-top: 5px;
+}
 .layer a{
     margin-top: 20px;
     color: #ff004f;
@@ -196,4 +200,13 @@ nav ul li a:hover::after{
 }
 .btn:hover{
     background: #ff004f;
+}
+/*-----------Projects------------*/
+.social-icons{
+    display: block;
+    margin-top: 10px;
+    margin-left: -5px;
+    font-size: 35px;
+    text-indent: 5px;
+    text-align: center;
 }
