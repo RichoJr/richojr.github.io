@@ -123,7 +123,7 @@ nav ul li a:hover::after{
 }
 .sub-title.center{
     text-align: center;
-    margin-top: 20%;
+    margin-top: 0%;
 }
 .project-list{
     display: grid;
@@ -209,4 +209,5 @@ nav ul li a:hover::after{
     font-size: 35px;
     text-indent: 5px;
     text-align: center;
+    margin-bottom: 2.5%;
 }
