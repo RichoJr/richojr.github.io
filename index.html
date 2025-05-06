@@ -107,41 +107,40 @@
             </h1>
             <div class="project-list">
                 <div class="project">
-                    <img src="images/KeyArt.jpg">
+                    <img src="images/KeyArt_PC.jpg">
                     <div class="layer">
                         <h3>Clumsy Champions</h3>
                         <p>A wacky physics-based party game where player's fight in medieval style combat</p>
                         <h4>Eninge: Unreal Engine 5</h4>
                         <h4>Team Size: 7</h4>
                         <h4>Roles: Documentation Manager, Technical Designer, Sound Designer, UI/UX Designer, QA</h4>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <i class="fa-solid fa-arrow-up-right-from-square" onclick="openWindow('clumsychampions')"></i>
                     </div>
                 </div>
                 <div class="project">
-                    <img src="images/Ronin.png">
+                    <img src="images/Ronin_PC.png">
                     <div class="layer">
                         <h3>Ronin</h3>
                         <p>A co-op escape room experience set in a japanese dungeon</p>
                         <h4>Eninge: Unity</h4>
                         <h4>Team Size: 6</h4>
                         <h4>Roles: Level Designer, Puzzle Designer, Puzzle Programmer</h4>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <i class="fa-solid fa-arrow-up-right-from-square" onclick="openWindow('ronin')"></i>
                     </div>
                 </div>
                 <div class="project">
-                    <img src="images/Davo.png">
+                    <img src="images/Davo_PC.png">
                     <div class="layer">
                         <h3>Davo's Trasheria</h3>
                         <p>A fast paced recycling management simulator</p>
                         <h4>Eninge: Unity</h4>
                         <h4>Team Size: 6</h4>
                         <h4>Roles: Level Designer, Gameplay Designer, Lighting Artist, Assistant Programmer</h4>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <i class="fa-solid fa-arrow-up-right-from-square" onclick="openWindow('davo')"></i>
                     </div>
                     
                 </div>
             </div>
-            <a href="#" class="btn">See more</a>
         </div>
     </div>
     <!-----------Contact------------>
@@ -152,6 +151,12 @@
                 <a href="https://www.linkedin.com/in/zacrichards-gamedev"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="mailto:zacrichards.gamedev@gmail.com"><i class="fa-solid fa-envelope"></i></a>
             </div>
+        </div>
+    </div>
+    <!-----------ProjectPages------------>
+    <div class="wrapper" id="sidepage">
+        <div class="pages">
+            <h2>Hello</h2>
         </div>
     </div>
     <script>
@@ -177,7 +182,12 @@
         function closeMenu(){
             sidemenu.style.right = "-150px";
         }
-    </script>
 
+        var sidepage = document.getElementById('pages')
+
+        function openWindow(){
+            sidepage.classList.add("active");
+        }
+    </script>
 </body>
 </html>

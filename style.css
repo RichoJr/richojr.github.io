@@ -11,7 +11,7 @@ body{
     background: #080808;
     color: #fff;
 }
-#header{
+#home{
     width: 100%;
     height: 100vh;
 }
@@ -177,7 +177,7 @@ nav ul li a:hover::after{
     font-weight: 600;
     margin-top: 5px;
 }
-.layer a{
+.layer i{
     margin-top: 20px;
     color: #ff004f;
     text-decoration: none;
@@ -189,21 +189,6 @@ nav ul li a:hover::after{
     border-radius: 50%;
     text-align: center;
 }
-.btn{
-    display: block;
-    margin: 50px auto;
-    width: fit-content;
-    border: 1px solid #ff004f;
-    padding: 14px 50px;
-    border-radius: 6px;
-    text-decoration: none;
-    color: #fff;
-    transition: background 0.5s;
-
-}
-.btn:hover{
-    background: #ff004f;
-}
 /*-----------Contact------------*/
 .social-icons{
     display: block;
@@ -213,6 +198,19 @@ nav ul li a:hover::after{
     text-indent: 5px;
     text-align: center;
     margin-bottom: 2.5%;
+}
+/*-----------ProjectPages------------*/
+.pages{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    right: 100%;
+    background: #080808;
+    z-index: 1;
+}
+#sidepage.active{
+    right: 0;
 }
 /*-----------For Small Devices------------*/
 nav .fa-solid{
