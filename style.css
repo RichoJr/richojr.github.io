@@ -209,7 +209,7 @@ nav ul li a:hover::after{
     background: #080808;
     z-index: 1;
 }
-#sidepage.active{
+.pages.active{
     right: 0;
 }
 /*-----------For Small Devices------------*/
