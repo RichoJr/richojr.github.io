@@ -241,6 +241,30 @@ nav ul li a:hover::after{
 .page-col-2 ul li{
     margin-left: 25px;
 }
+.image-carousel{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+}
+.card{
+    width: 640px;
+    height: 360px;
+    border: 2px solid black;
+    box-sizing: border-box;
+
+    background-color: #4175c8;
+    text-align: center;
+}
+.view-port{
+    background-color: red;
+    width: 640px;
+    height: 360px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    /*overflow: hidden;*/
+}
 /*-----ClumsyChampions-----*/
 .clumsyvideo{
     margin: auto;
