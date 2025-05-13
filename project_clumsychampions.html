@@ -37,32 +37,37 @@
                     The catch of this game is, at the end of each round all of the players who 
                     lost are given a choice of permanent upgrades to tilt the balance in their favour.
                 </p>
-                <button id="next">Next</button>
-                <div class="view-port">
-                    <div class="image-carousel">
-                        <div class="card">
-                            <h1>1</h1>
-                        </div>
-                        <div class="card">
-                            <h1>2</h1>
-                        </div>
-                        <div class="card">
-                            <h1>3</h1>
-                        </div>
-                        <div class="card">
-                            <h1>4</h1>
+                <div class="row">
+                    <div class="card-carousel-col1">
+                        <button id="prev"><i class="fa-regular fa-circle-left"></i></button>
+                    </div>
+                    <div class="card-carousel-col2">
+                        <div class="view-port">
+                            <div class="image-carousel">
+                                <div class="card">
+                                    <div class="clumsyvideo">
+                                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/zY6x6-HnrFU?si=OjXsC3eSfFPQ64ZO" 
+                                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                                        gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                </div>
+                                <div class="card"><img src="images/Clumsy/CCHome.PNG"></div>
+                                <div class="card"><img src="images/Clumsy/CCGame1.PNG"></div>
+                                <div class="card"><img src="images/Clumsy/CCGame2.PNG"></div>
+                                <div class="card"><img src="images/Clumsy/CCGame3.PNG"></div>
+                                <div class="card"><img src="images/Clumsy/CCGame4.PNG"></div>
+                                <div class="card"><img src="images/Clumsy/CCGame5.PNG"></div>
+                                <div class="card"><img src="images/Clumsy/CCMenu1.PNG"></div>
+                                <div class="card"><img src="images/Clumsy/CCMenu2.PNG"></div>
+                                <div class="card"><img src="images/Clumsy/CCMenu3.PNG"></div>
+                            </div>
                         </div>
                     </div>
+                    <div class="card-carousel-col3">
+                        <button id="next"><i class="fa-regular fa-circle-right"></i></button>
+                    </div>
                 </div>
-                <button id="prev">Prev</button>
-                
-                <div class="clumsyvideo">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/zY6x6-HnrFU?si=OjXsC3eSfFPQ64ZO" 
-                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-                    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                    </iframe>
-                </div>
-
                 <div class="row">
                     <div class="page-col-1">
                         <p>
@@ -120,6 +125,59 @@
     </div>
         
     <script>
+        const next = document.getElementById('next');
+        const prev = document.getElementById('prev');
+        const cards = document.querySelector('.image-carousel');
+
+        const first_card_clone = cards.children[0].cloneNode(true);
+        const last_card_clone = cards.children[cards.children.length - 1].cloneNode(true);
+
+        cards.insertBefore(last_card_clone, cards.children[0]);
+        cards.appendChild(first_card_clone);
+
+        cards.style.transitionDuration = "0.0s";
+        cards.style.transform = `translate(-640px)`;
+
+        let current_card = 1;
+
+        next.addEventListener('click', () => {
+            if(current_card < cards.children.length - 1){
+                current_card++;
+                cards.style.transitionDuration = "0.5s";
+                cards.style.transform = `translate(-${current_card * 640}px)`;
+
+                if(current_card === cards.children.length - 1){
+                    setTimeout(() => {
+                        cards.style.transitionDuration = "0.0s";
+                        cards.style.transform = `translate(-640px)`;
+                        current_card = 1;
+                    }, 600)
+                }
+            }
+            else{
+                return;
+            }
+        });
+
+        prev.addEventListener('click', () => {
+            if(current_card > 0){
+                current_card--;
+                cards.style.transitionDuration = "0.5s";
+                cards.style.transform = `translate(-${current_card * 640}px)`;
+
+                if(current_card === 0){
+                    setTimeout(() => {
+                        cards.style.transitionDuration = "0.0s";
+                        cards.style.transform = `translate(-${(cards.children.length - 2) * 640}px)`;
+                        current_card = cards.children.length - 2;
+                    }, 600)
+                }
+            }
+            else{
+                return;
+            }
+        });
+
         var sidemenu = document.getElementById("sidemenu")
 
         function openMenu(){

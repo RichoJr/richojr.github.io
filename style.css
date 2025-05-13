@@ -249,11 +249,10 @@ nav ul li a:hover::after{
 .card{
     width: 640px;
     height: 360px;
-    border: 2px solid black;
-    box-sizing: border-box;
-
-    background-color: #4175c8;
-    text-align: center;
+}
+.card img{
+    width: 640px;
+    height: 360px;
 }
 .view-port{
     background-color: red;
@@ -263,13 +262,26 @@ nav ul li a:hover::after{
     margin-top: 10px;
     margin-bottom: 10px;
 
-    /*overflow: hidden;*/
+    overflow: hidden
 }
+.card-carousel-col1{
+    margin: auto;
+}
+.card-carousel-col1 button, .card-carousel-col3 button{
+    font-size: 36px;
+    background-color: transparent;
+    border: none;
+}
+.card-carousel-col1 i, .card-carousel-col3 i{
+    color: #4175c8;
+}
+.card-carousel-col3{
+    margin: auto;
+    font-size: 32px;
+}
+
 /*-----ClumsyChampions-----*/
 .clumsyvideo{
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
     width: 640px;
     height: 360px;
 }
