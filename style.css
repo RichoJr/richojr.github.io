@@ -385,4 +385,24 @@ nav .fa-solid{
     .card-carousel-col3{
         font-size: 0px;
     }
+    .page-col-1{
+        font-size: 20px;
+        margin: auto;
+        flex-basis: auto;
+        text-align: center;
+    }
+    .page-col-1 h4{
+        font-size: 28px;
+    }
+    .page-col-2{
+        font-size: 20px;
+        flex-basis: auto;
+    }
+    .page-col-2 h3{
+        font-size: 28px;
+    }
+    .steam-icon{
+        font-size: 64px;
+        padding-bottom: 10%;
+    }
 }
