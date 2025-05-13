@@ -255,13 +255,11 @@ nav ul li a:hover::after{
     height: 360px;
 }
 .view-port{
-    background-color: red;
     width: 640px;
     height: 360px;
     margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;
-
     overflow: hidden
 }
 .card-carousel-col1{
@@ -290,9 +288,14 @@ nav ul li a:hover::after{
     margin-top: 20px;
     font-size: 35px;
 }
+
 /*-----------For Small Devices------------*/
 nav .fa-solid{
     display: none;
+}
+.small-device-buttons{
+    display: none;
+    text-align: center;
 }
 @media only screen and (max-width: 600px){
     .header-text{
@@ -341,14 +344,45 @@ nav .fa-solid{
         margin-right: 20px;
     }
     .layer h3{
-        margin-bottom: 10px;
-    }
-    .layer a{
-        margin-top: 10px;
+        margin-bottom: 3px;
     }
     /*-----Project Pages-----*/
+    .small-device-buttons{
+        display: block;
+    }
+    .small-device-buttons button{
+        font-size: 32px;
+        background-color: transparent;
+        border: none;
+        color: #4175c8;
+    }
     .sub-title.pages{
         font-size: 25px;
         font-weight: 600;
+    }
+    .container.pages{
+        padding: 2px 2%;
+    }
+    .clumsyvideo{
+        width: 320px;
+        height: 180px;
+    }
+    .card{
+        width: 320px;
+        height: 180px;
+    }
+    .card img{
+        width: 320px;
+        height: 180px;
+    }
+    .view-port{
+        width: 320px;
+        height: 180px;
+    }
+    .card-carousel-col1 i, .card-carousel-col3 i{
+        display: none;
+    }
+    .card-carousel-col3{
+        font-size: 0px;
     }
 }

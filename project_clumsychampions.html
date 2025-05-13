@@ -68,6 +68,16 @@
                         <button id="next"><i class="fa-regular fa-circle-right"></i></button>
                     </div>
                 </div>
+                <div class="small-device-buttons">
+                    <div class="row">
+                        <div class="small-button-col1">
+                            <button id="prev small"><i class="fa-regular fa-circle-left"></i></button>
+                        </div>
+                        <div class="small-button-col2">
+                            <button id="next small"><i class="fa-regular fa-circle-right"></i></button>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="page-col-1">
                         <p>
@@ -126,7 +136,9 @@
         
     <script>
         const next = document.getElementById('next');
+        const nextsmall = document.getElementById('next small');
         const prev = document.getElementById('prev');
+        const prevsmall = document.getElementById('prev small');
         const cards = document.querySelector('.image-carousel');
 
         const first_card_clone = cards.children[0].cloneNode(true);
@@ -169,6 +181,44 @@
                     setTimeout(() => {
                         cards.style.transitionDuration = "0.0s";
                         cards.style.transform = `translate(-${(cards.children.length - 2) * 640}px)`;
+                        current_card = cards.children.length - 2;
+                    }, 600)
+                }
+            }
+            else{
+                return;
+            }
+        });
+
+        nextsmall.addEventListener('click', () => {
+            if(current_card < cards.children.length - 1){
+                current_card++;
+                cards.style.transitionDuration = "0.5s";
+                cards.style.transform = `translate(-${current_card * 320}px)`;
+
+                if(current_card === cards.children.length - 1){
+                    setTimeout(() => {
+                        cards.style.transitionDuration = "0.0s";
+                        cards.style.transform = `translate(-320px)`;
+                        current_card = 1;
+                    }, 600)
+                }
+            }
+            else{
+                return;
+            }
+        });
+
+        prevsmall.addEventListener('click', () => {
+            if(current_card > 0){
+                current_card--;
+                cards.style.transitionDuration = "0.5s";
+                cards.style.transform = `translate(-${current_card * 320}px)`;
+
+                if(current_card === 0){
+                    setTimeout(() => {
+                        cards.style.transitionDuration = "0.0s";
+                        cards.style.transform = `translate(-${(cards.children.length - 2) * 320}px)`;
                         current_card = cards.children.length - 2;
                     }, 600)
                 }
