@@ -249,6 +249,7 @@ nav ul li a:hover::after{
 .card{
     width: 640px;
     height: 360px;
+    
 }
 .card img{
     width: 640px;
@@ -279,7 +280,7 @@ nav ul li a:hover::after{
 }
 
 /*-----ClumsyChampions-----*/
-.clumsyvideo{
+.video{
     width: 640px;
     height: 360px;
 }

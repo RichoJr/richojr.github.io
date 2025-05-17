@@ -29,14 +29,16 @@
             <div class="wrapper">
                 <div class="project-header">
                     <h1 class="sub-title pages">
-                        Clumsy Champions
+                        Davo's Trasheria
                     </h1>
                 </div>
-                <p>Clumsy Champions is a wacky, physics-based party game where players engage 
-                    in medieval combat with the goal of being the first to win three rounds. 
-                    The catch of this game is, at the end of each round all of the players who 
-                    lost are given a choice of permanent upgrades to tilt the balance in their favour.
-                </p>
+                    <p> 
+                        Davo's Trasheria was made for the Ubisoft Australia 2024 Game Jam. It's a fast-paced 
+                        trash recyclement sim, where the player takes trash that's been dropped onto a conveyor 
+                        belt and turns it into a profitable item. The trash must be removed from the conveyor 
+                        belt before it reaches the end and falls into a furnace. If they fail to do so it'll 
+                        produce pollutants that lower the player's daily score.
+                    </p>
                 <div class="row">
                     <div class="card-carousel-col1">
                         <button id="prev"><i class="fa-regular fa-circle-left"></i></button>
@@ -46,21 +48,16 @@
                             <div class="image-carousel">
                                 <div class="card">
                                     <div class="video">
-                                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/zY6x6-HnrFU?si=OjXsC3eSfFPQ64ZO" 
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/4RHm8lWim3c?si=hxtkuCu3ceYRIiNc" 
                                         title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-                                        gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                                        </iframe>
+                                        gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                     </div>
                                 </div>
-                                <div class="card"><img src="images/Clumsy/CCHome.PNG"></div>
-                                <div class="card"><img src="images/Clumsy/CCGame1.PNG"></div>
-                                <div class="card"><img src="images/Clumsy/CCGame2.PNG"></div>
-                                <div class="card"><img src="images/Clumsy/CCGame3.PNG"></div>
-                                <div class="card"><img src="images/Clumsy/CCGame4.PNG"></div>
-                                <div class="card"><img src="images/Clumsy/CCGame5.PNG"></div>
-                                <div class="card"><img src="images/Clumsy/CCMenu1.PNG"></div>
-                                <div class="card"><img src="images/Clumsy/CCMenu2.PNG"></div>
-                                <div class="card"><img src="images/Clumsy/CCMenu3.PNG"></div>
+                                <div class="card"><img src="images/Davo/Davos_1.PNG"></div>
+                                <div class="card"><img src="images/Davo/Davos_2.PNG"></div>
+                                <div class="card"><img src="images/Davo/Davos_3.PNG"></div>
+                                <div class="card"><img src="images/Davo/Davos_4.PNG"></div>
+                                <div class="card"><img src="images/Davo/Davos_5.PNG"></div>
                             </div>
                         </div>
                     </div>
@@ -82,50 +79,52 @@
                     <div class="page-col-1">
                         <p>
                             <h4>Platform:</h4>
-                            Windows PC (Steam)<br>
+                            Windows PC (itch.io)<br>
                             <h4>Engine:</h4>
-                            Unreal Engine 5 (UE5)<br>
+                            Unity<br>
                             <h4>Language:</h4>
-                            UE5's Blueprint<br>
+                            C#<br>
                             <h4>Team Size:</h4>
-                            7<br>
+                            6<br>
                             <h4>Duration:</h4>
-                            5 months
+                            2 weeks
                         </p>
                         <div class="steam-icon">
-                            <a href="https://store.steampowered.com/app/3302710/Clumsy_Champions/" target="_blank"><i class="fa-brands fa-steam"></i></a>
+                            <a href="https://slushyrh.itch.io/davos-trasheria" target="_blank"><i class="fa-brands fa-itch-io"></i></i></a>
                         </div>
                     </div>
 
                     <div class="page-col-2">
                         <h3>Roles & Contributions</h3>
-                        <p><b>Documentation Manager</b></p>
+                        <p><b>Concepting</b></p>
                         <ul>
-                            <li>Working on and keeping a GDD, Production Plan, and Project Tracking Tool up-to-date throughout project</li>
+                            <li>Researching how different types of trash are recycled in Australia and incorporating these techniques into gameplay</li>
+                            <li>Creating a brief narrative at the start of the game which explains how and why they are in the factory</li>
+                        </ul>
+                        <p><br><b>Level Designer</b></p>
+                        <ul>
+                            <li>
+                                Grey boxing the factory layout with a focus on the best distance for each piece of machinery and length of the conveyor 
+                                belt before it reaches the furnace
+                            </li>
                         </ul>
                         <p><br><b>Technical Designer</b></p>
                         <ul>
-                            <li>Creating the settings menu layout and complete functionality</li>
-                            <li>Creating early framework of the parry system while programmer was occupied</li>
-                            <li>Creating an occlusion mask for when player's line of sight would be obstructed</li>
-                            <li>Updating the potion selection system to use a timer based system</li>
-                            <li>Updating the environmental hazards system sometimes target players and increase their spawn chance based on the number of players</li>
+                            <li>Creating gameplay timer and conveyor belt functionality using C# scripting</li>
                         </ul>
-                        <p><br><b>Sound Designer</b></p>
+                        <p><br><b>Gameplay Designer</b></p>
                         <ul>
-                            <li>Locating SFX from a sound library that fit with the theming of the project</li>
-                            <li>Creating and allocating sound cues and audio mixers</li>
-                            <li>Creating moments when the audio cue needs to play</li>
+                            <li>Assigning all trash objects to their machinery and workbench items</li>
+                            <li>
+                                Tweaking level(day) escalating difficulty as they progress(conveyor belt speed, type of trash to drop, 
+                                time which trash type takes to be recycled)
+                            </li>
+                            <li>Tweaking item sale price to allow of the purchase of appropriate upgrades for each day</li>
                         </ul>
-                        <p><br><b>UI/UX Designer</b></p>
+                        <p><br><b>Lighting Artist</b></p>
                         <ul>
-                            <li>Creating the UI framework across the project</li>
-                            <li>Creating and connecting functionality towards player HUDs & menu sequences</li>
-                        </ul>
-                        <p><br><b>QA</b></p>
-                        <ul>
-                            <li>Creating test plans to check each section of the project is running correctly</li>
-                            <li>Using test data from play testers and test plans to make appropriate changes towards gameplay feel and functionality</li>
+                            <li>Creating a night time effect using Unity's directional light</li>
+                            <li>Setting up factory spot lights to help create a visual distance from each piece of machinery</li>
                         </ul>
                     </div>
                 </div>
